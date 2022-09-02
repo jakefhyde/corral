@@ -12,7 +12,7 @@ import (
 )
 
 const downloadDescription = `
-Download a package from an OCI registry to the local filesystem.
+Download a package from an OCI registry to the local filesystem
 
 Examples:
 corral package download ghcr.io/rancher/my_pkg:latest
@@ -22,7 +22,7 @@ corral package download ghcr.io/rancher/my_pkg:latest dest
 func NewCommandDownload() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "download PACKAGE [DEST]",
-		Short: "Download a package from an OCI registry.",
+		Short: "Download a package from an OCI registry",
 		Long:  downloadDescription,
 		Run:   download,
 		Args:  cobra.RangeArgs(1, 2),
@@ -65,8 +65,8 @@ func download(_ *cobra.Command, args []string) {
 			}
 
 			_, err = io.Copy(f, in)
-			f.Close()
-			in.Close()
+			_ = f.Close()
+			_ = in.Close()
 
 			if err != nil {
 				return err

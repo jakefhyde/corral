@@ -9,8 +9,8 @@ import (
 func NewCommandSet() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "set NAME VALUE",
-		Short: "Create or update global variable.",
-		Long:  "Create or update global variable.",
+		Short: "Create or update global variable",
+		Long:  "Create or update global variable",
 		Args:  cobra.ExactArgs(2),
 		Run: func(cmd *cobra.Command, args []string) {
 			createVar(args[0], args[1])

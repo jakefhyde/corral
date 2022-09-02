@@ -1,9 +1,10 @@
 package cmd_package
 
 import (
-	"github.com/sirupsen/logrus"
 	"os"
 	"path/filepath"
+
+	"github.com/sirupsen/logrus"
 
 	_package "github.com/rancherlabs/corral/pkg/package"
 	"github.com/spf13/cobra"
@@ -11,7 +12,7 @@ import (
 )
 
 const templateDescription = `
-Create a package from existing package(s).
+Create a package from existing package(s)
 
 Examples:
 corral package template a b c OUT 

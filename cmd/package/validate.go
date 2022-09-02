@@ -11,7 +11,7 @@ import (
 func NewCommandValidate() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "validate PACKAGE",
-		Short: "Validate the given package's manifest and structure.",
+		Short: "Validate the given package's manifest and structure",
 		Args:  cobra.ExactArgs(1),
 		Run:   validate,
 	}
@@ -26,7 +26,7 @@ func validate(_ *cobra.Command, args []string) {
 	}
 
 	if i, err := os.Stat(pkg.OverlayPath()); err != nil || !i.IsDir() {
-		logrus.Fatal("overlay folder not found.")
+		logrus.Fatal("overlay folder not found")
 	}
 
 	for _, cmd := range pkg.Commands {

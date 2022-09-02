@@ -8,7 +8,7 @@ import (
 func NewCommandPackage() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "package",
-		Short: "Commands related to managing packages.",
+		Short: "Commands related to managing packages",
 		Run: func(cmd *cobra.Command, args []string) {
 			if err := cmd.Usage(); err != nil {
 				logrus.Fatalln(err)

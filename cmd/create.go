@@ -27,7 +27,7 @@ var (
 )
 
 const createDescription = `
-Create a new corral from the given package. Packages can either be a valid OCI reference or a path to a local directory.
+Create a new corral from the given package. Packages can either be a valid OCI reference or a path to a local directory
 
 Examples:
 corral create k3s ghcr.io/rancher/k3s
@@ -54,15 +54,15 @@ func NewCommandCreate() *cobra.Command {
 		},
 	}
 
-	cmd.Flags().String("config", "", "loadManifest flags for this command from a file.")
+	cmd.Flags().String("config", "", "loadManifest flags for this command from a file")
 
-	cmd.Flags().StringArrayP("variable", "v", []string{}, "Set a variable to configure the package.")
+	cmd.Flags().StringArrayP("variable", "v", []string{}, "Set a variable to configure the package")
 	_ = cfgViper.BindPFlag("variable", cmd.Flags().Lookup("variable"))
 
-	cmd.Flags().StringP("package", "p", "", "Set a variable to configure the package.")
+	cmd.Flags().StringP("package", "p", "", "Set a variable to configure the package")
 	_ = cfgViper.BindPFlag("package", cmd.Flags().Lookup("package"))
 
-	cmd.Flags().Bool("recreate", false, "Destroy corral with the same name if it exists before creating.")
+	cmd.Flags().Bool("recreate", false, "Destroy corral with the same name if it exists before creating")
 	_ = cfgViper.BindPFlag("recreate", cmd.Flags().Lookup("recreate"))
 
 	cmd.Flags().Bool("skip-cleanup", false, "Do not run terraform destroy when an error is encountered. This can result in un-tracked infrastructure resources!")

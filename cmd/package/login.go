@@ -11,13 +11,13 @@ import (
 func NewCommandLogin() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "login REGISTRY",
-		Short: "Login to an OCI registry.",
+		Short: "Login to an OCI registry",
 		Args:  cobra.ExactArgs(1),
 		Run:   login,
 	}
 
-	cmd.Flags().String("username", "", "The username for the registry.")
-	cmd.Flags().String("password", "", "The password for the user.")
+	cmd.Flags().String("username", "", "The username for the registry")
+	cmd.Flags().String("password", "", "The password for the user")
 
 	return cmd
 }

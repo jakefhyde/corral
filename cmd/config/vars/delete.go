@@ -9,8 +9,8 @@ import (
 func NewCommandDelete() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "delete [NAME | [NAME...]]",
-		Short: "Remove existing global variable.",
-		Long:  "Remove existing global variable.",
+		Short: "Remove existing global variable",
+		Long:  "Remove existing global variable",
 		Args:  cobra.MinimumNArgs(1),
 		Run:   deleteVar,
 	}

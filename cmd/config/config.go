@@ -15,13 +15,13 @@ import (
 func NewCommandConfig() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "config",
-		Short: "Set global configuration and download dependencies.",
-		Long:  "Set global configuration and download dependencies.",
+		Short: "Set global configuration and download dependencies",
+		Long:  "Set global configuration and download dependencies",
 		Run:   configCorral,
 	}
 
-	cmd.Flags().String("user_id", "", "The user id is used by packages to help identify resources.")
-	cmd.Flags().String("public_key", "", "Path to a public key you want packages to install on nodes.")
+	cmd.Flags().String("user_id", "", "The user id is used by packages to help identify resources")
+	cmd.Flags().String("public_key", "", "Path to a public key you want packages to install on nodes")
 
 	cmd.AddCommand(vars.NewVarsCommand())
 

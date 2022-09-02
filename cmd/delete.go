@@ -13,13 +13,13 @@ import (
 
 const deleteDescription = `
 Delete the given corral(s) and the associated infrastructure. If multiple corrals are given they will be deleted in
-the order they appear one at a time.
+the order they appear one at a time
 `
 
 func NewCommandDelete() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "delete [NAME [NAME ...]",
-		Short: "Delete the given corral(s) and the associated infrastructure.",
+		Short: "Delete the given corral(s) and the associated infrastructure",
 		Long:  deleteDescription,
 		Args:  cobra.MinimumNArgs(1),
 		Run:   deleteCorral,

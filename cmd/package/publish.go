@@ -11,7 +11,7 @@ import (
 )
 
 const publishDescription = `
-Upload the package found at the given target to the given registry.
+Upload the package found at the given target to the given registry
 
 Examples:
 corral publish /home/rancher/my_pkg ghcr.io/rancher/my_pkg:latest
@@ -20,7 +20,7 @@ corral publish /home/rancher/my_pkg ghcr.io/rancher/my_pkg:latest
 func NewCommandPublish() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "publish TARGET REFERENCE",
-		Short: "Upload a package to an OCI registry.",
+		Short: "Upload a package to an OCI registry",
 		Long:  publishDescription,
 		Run:   publish,
 		Args:  cobra.ExactArgs(2),
